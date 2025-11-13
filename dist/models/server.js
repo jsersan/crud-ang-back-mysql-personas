@@ -25,8 +25,9 @@ var Server = /** @class */ (function () {
         // Configuración específica de CORS para permitir Angular local
         this.app.use((0, cors_1.default)({
         origin: [
-            'http://localhost:4200',
-            'https://crud-ang-back-mysql-personas.onrender.com'
+            'http://localhost:4200',  // Para desarrollo local
+            'http://txemaserrano.com',  // Tu frontend real
+            'https://crud-ang-back-mysql-personas.onrender.com'  // Si usas este también
         ],
         credentials: true
 }));
