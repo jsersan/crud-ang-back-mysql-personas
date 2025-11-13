@@ -1,0 +1,11 @@
+"use strict";
+exports.__esModule = true;
+var express_1 = require("express");
+var persona_controller_1 = require("../controllers/persona.controller");
+var router = (0, express_1.Router)();
+router.get('/', persona_controller_1.getPersonas);
+router.get('/:documento', persona_controller_1.getPersona);
+router["delete"]('/:documento', persona_controller_1.deletePersona);
+router.post('/', persona_controller_1.postPersona);
+router.put('/:documento', persona_controller_1.putPersona);
+exports["default"] = router;
