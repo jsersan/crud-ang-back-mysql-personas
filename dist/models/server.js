@@ -24,9 +24,12 @@ var Server = /** @class */ (function () {
     Server.prototype.middlewares = function () {
         // Configuración específica de CORS para permitir Angular local
         this.app.use((0, cors_1.default)({
-            origin: 'http://localhost:4200',
-            credentials: true // Si vas a usar cookies/sessions, si no, puedes quitar esta línea
-        }));
+        origin: [
+            'http://localhost:4200',
+            'https://crud-ang-back-mysql-personas.onrender.com'
+        ],
+        credentials: true
+}));
         // Parseo del body
         this.app.use(express_1.default.json());
     };
